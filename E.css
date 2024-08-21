@@ -4,6 +4,23 @@
     font-family: system-ui;
     display: block;
 }
+h1{
+    font-size: 300%;
+}
+p{
+    font-size: 200%;
+}
+div{
+    font-size: 200%;
+}
 #Boton{
-    background-color: chocolate;
+    background-color: rgb(255, 255, 255);
+    width: 3cm;
+    font-size: 200%;
+    height: 1.5cm;
+}
+canvas {
+    background: #888888;
+    border-color: #000;
+    border-radius: 5px;
 }
