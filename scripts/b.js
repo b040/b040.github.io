@@ -18,10 +18,10 @@ var D = {
         await wait(3)
         if (Segundos <= 30){
             t1.innerText = "Llevas muy poco tiempo,".concat(Segundos).concat(" segundos. ¿Usaste autoclick o la consola de desarollador? No importa.");
-        } else {if (Segundos <= 80){
+        } else {
             t1.innerText = "Llevas mas de".concat(Segundos).concat(" segundos aqui.");
             Boton.hidden = false
-        }};
+        };
         Boton.hidden = false;
     },
     click500(){
