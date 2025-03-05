@@ -30,5 +30,20 @@ var D = {
             t1.innerText = "Bueno, te cambiare el boton para que presumas el tiempo que gastaste en esto."
             Boton.style.backgroundColor = "Brown"; Boton.style.color = "White";
         }, 5000);
+    },
+    click600(){
+        Boton.hidden = true;
+        t1.innerText = "¿Por qué sigues?";
+        setTimeout(() => {
+            t1.innerText = "¡Si presionas otra vez el boton te hechare de aqui!"
+        }, 5000);
+        Boton.hidden = false;
+    },
+    click601(){
+        Boton.hidden = true;
+        t1.innerText = "¡FUERA DE AQUI!";
+        setTimeout(() => {
+            window.close();
+        }, 3000);
     }
 }
