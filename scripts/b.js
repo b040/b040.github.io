@@ -17,31 +17,34 @@ var D = {
         t1.innerText = "Bueno, de igual manera te lo digo. Dejame revisar...";
         await wait(3)
         if (Segundos <= 30){
-            t1.innerText = "Llevas muy poco tiempo,".concat(Segundos).concat(" segundos. ¿Usaste autoclick o la consola de desarollador? No importa.");
+            t1.innerText = "Llevas muy poco tiempo, ".concat(Segundos).concat(" segundos. ¿Usaste autoclick o la consola de desarollador? Bueno, no importa.");
         } else {
-            t1.innerText = "Llevas mas de".concat(Segundos).concat(" segundos aqui.");
+            t1.innerText = "Llevas mas de ".concat(Segundos).concat(" segundos aqui.");
             Boton.hidden = false
         };
         Boton.hidden = false;
     },
-    click500(){
+    async click500(){
         t1.innerText = "Felicidades, no tienes nada que hacer. ¿Verdad?"
-        setTimeout(() => {
-            t1.innerText = "Bueno, te cambiare el boton para que presumas el tiempo que gastaste en esto."
-            Boton.style.backgroundColor = "Brown"; Boton.style.color = "White";
-        }, 5000);
+        await wait(5)
+        t1.innerText = "Bueno, te cambiare el boton para que presumas el tiempo que gastaste en esto."
+        Boton.style.backgroundColor = "Brown"; Boton.style.color = "White";
     },
-    click600(){
+    async click600(){
         Boton.hidden = true;
         t1.innerText = "¿Por qué sigues?";
-        setTimeout(() => {
-            t1.innerText = "¡Si presionas otra vez el boton te hechare de aqui!"
-        }, 5000);
+        await wait(2)
         Boton.hidden = false;
     },
     click601(){
         Boton.hidden = true;
-        t1.innerText = "¡FUERA DE AQUI!";
+        t1.innerText = "Un click mas y te hecho de aqui...";
+        setTimeout(() => {
+            Boton.hidden = false;
+        }, 2000);
+    },
+    click602(){
+        t1.innerText = "";
         setTimeout(() => {
             window.close();
         }, 3000);
